@@ -17,8 +17,13 @@ function TodoList() {
   const [todos, loading, error, totalCount, visibleCount] = useTodos(limit, start, completed, userId, sortOrder)
 
 
+  // вывод ошибки
   if (error) {
-    return <p>{error}</p>
+    return (
+    <div className="fixed inset-0 bg-black/30 flex flex-col items-center justify-center z-50">
+          <p className="text-white text-xl">{error}</p>
+    </div>
+    )
   }
 
   // Определение текущей страницы и количество страниц
@@ -73,6 +78,7 @@ function TodoList() {
         </div>
       </div>
 
+      {/* пагинация */}
       <div className='flex-1 flex justify-center gap-4 mb-4 items-end'>
         <Button onClick={() => setStart(prev => prev - limit)} disabled={start < limit}>Prev</Button>
 
@@ -97,7 +103,7 @@ function TodoList() {
         </div>
       )}
 
-      {/* list grid */}
+      {/* todos grid */}
       <ul className='grid grid-cols-4 gap-4'>
         {todos.map((item) => (
           <li key={item.id} className='list-none'>

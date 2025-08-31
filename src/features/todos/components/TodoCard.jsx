@@ -1,7 +1,7 @@
 import { CircleCheckBig, CircleUser } from 'lucide-react'
 import React from 'react'
 
-
+// определение цветов иконки для определенного userId
 function colorFromId(id) {
   const hue = (id * 137 + 137) % 360
   return `hsl(${hue}, 65%, 40%)`
