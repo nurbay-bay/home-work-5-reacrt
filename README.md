@@ -21,18 +21,18 @@
 
 ## Структура проекта
 
+```bash
 src/
-├─ hooks/
-│ └─ useTodos.js # Хук для загрузки todos
-├─ features/
-│ └─ TodoList.jsx # Основной компонент списка задач
+├─ features/todos/
+│ ├─ TodoList.jsx # Основной компонент списка задач
+| ├─ hooks/
+| |  └─ useTodos.js # Хук для загрузки todos
+| └─ components/
+|    └─ TodoCard.jsx # Карточка задачи
 ├─ shared/ui/
 │ ├─ Button.jsx # Компонент кнопки
 │ └─ Select.jsx # Компонент селекта
-└─ features/TodoCard.jsx # Карточка задачи
-
-yaml
-Копировать код
+```
 
 ---
 
@@ -40,10 +40,10 @@ yaml
 
 ```bash
 # клонировать репозиторий
-git clone <your-repo-url>
+git clone https://github.com/nurbay-bay/home-work-5-reacrt
 
 # перейти в папку проекта
-cd <project-name>
+cd home-work-5-reacrt
 
 # установить зависимости
 npm install
@@ -53,10 +53,10 @@ npm run dev
 ```
 
 ## Технологии
--React 18
--Axios
--TailwindCSS
--Lucide-react (иконки)
+- React 18
+- Axios
+- TailwindCSS
+- Lucide-react (иконки)
 
 ## Скриншот интерфейса
 ![screenshot](./public/screenshot.png)
