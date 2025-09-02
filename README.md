@@ -60,3 +60,9 @@ npm run dev
 
 ## Скриншот интерфейса
 ![screenshot](./public/screenshot.png)
+
+## Demo
+[Посмотреть проект](https://home-work-5-reacrt.vercel.app/)
+
+
+
